@@ -12,6 +12,9 @@
  *  functions.
  */
 
+var a = 7;
+var b = 3;
+
 
 /**
  *  #2
@@ -20,6 +23,16 @@
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
+
+//console.log (sum);
+
+function add(number1,number2) {
+	return number1 + number2;
+ }
+add();
+
+var sum  = add(a,b);
+console.log(sum);
 
 
 /**
@@ -30,6 +43,11 @@
  *  Store this value in a variable named `difference`
  */
 
+function subtract(number1,number2) {
+	return number2 - number1;
+}
+var difference = subtract(a,b);
+console.log(difference);
 
 /**
  *  #4
@@ -39,6 +57,11 @@
  *  Store this value in a variable named `product`
  */
 
+function multiply(number1,number2) {
+	return number2 * number1
+}
+var product = multiply(a,b);
+console.log(product);
 
 /**
  *  #5
@@ -50,6 +73,10 @@
  *  value stored in `difference`.
  */
 
+function checkDifference(X){
+	return "My football team lost " + difference + " times this week";
+}
+console.log(checkDifference());
 
 /**
  *  #6
@@ -61,15 +88,25 @@
  *  stored in the variable `sum`.
  */
 
+function checkSum () {
+	return "I CAN ADDZ " + sum  + " NUMBERS"
+}
+console.log(checkSum());
 
 /**
  *  #7
  *  Function - checkProduct
  *
- *  This function checks the value stored at `product` and
+ *  This function checks the value stored at `product` 
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
+
+function checkProduct () {
+	return product * difference;
+}
+
+console.log(checkProduct());
 
 
 /**
@@ -86,6 +123,13 @@
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
+function addThenSubtract(number1,number2,number3){
+	return (number1 + number2) - number3;
+}
+
+var addThenMinus = addThenSubtract (sum, difference, product);
+console.log(addThenMinus);
+
 
 /**
  *  #9
@@ -99,6 +143,12 @@
  *  Store the return of this function to a variable named `howMany`
  */
 
+function addThenMultiply(number1,number2,number3){
+	return (number1 + number2) * number3;
+}
+
+var howMany = addThenMultiply(sum,difference,product);
+console.log(howMany)
 
 /**
  *  #10
@@ -114,7 +164,17 @@
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
+ 
+function createFullName(firstName,lastName) {
+	var result = ""; 
+	result = firstName + " " + lastName 
+	return result;
+}
 
+var myName = createFullName("Tram", "Ngo")
+var neighbor = createFullName("Holly","Wood")
+console.log(myName);
+console.log("My neighbor's name is" + neighbor);
 
 /**
  *  #11
@@ -131,6 +191,16 @@
  *  Store the return value to a variable named** `canDrinkBeer`
  */
 
+function verifyDrinkingAge(age){
+	var result;
+
+	result = age >=21; 
+	return result; 
+}
+
+var canDrinkBeer = verifyDrinkingAge(25); 
+console.log('Can I drink beer?: ' + canDrinkBeer);
+
 
 /**
  *  #12
@@ -142,6 +212,16 @@
  *  should be "This Party will have an open bar".
  */
 
+//Method 1
+function throwParty(age){
+
+	 if (canDrinkBeer === false) {
+		return "The Party will have tons of Cake!"
+	} else {
+		return "This Party will have an open bar."
+	} 
+}
+console.log(throwParty (canDrinkBeer));
 
 /**
  *  #13
@@ -163,6 +243,26 @@
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
 
+function eatFood(firstName, lastName, food){
+  return firstName + " " + lastName + " loves to eat " + food +".";
+}
+
+var eaten = eatFood("Biggie", "Smallz", "manapuas");
+console.log(eaten);
+
+function repeater(printX, oldEnuff){
+  for(var i = 0; i<printX; i++){
+    if(oldEnuff){
+    console.log("Bacon Pancakes, makin' Bacon Pankcakes...");
+  }else{
+    console.log("Let it go....LET IT GOOOOOOoOoOoOo")
+  }
+}
+}
+
+repeater(howMany, canDrinkBeer);
+
+
 
 /**
  *  #14
@@ -175,4 +275,5 @@
  *  the message will be `"Bacon Pancakes, makin' Bacon Pancakes..."`
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
+
 
