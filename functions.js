@@ -250,19 +250,6 @@ function eatFood(firstName, lastName, food){
 var eaten = eatFood("Biggie", "Smallz", "manapuas");
 console.log(eaten);
 
-function repeater(printX, oldEnuff){
-  for(var i = 0; i<printX; i++){
-    if(oldEnuff){
-    console.log("Bacon Pancakes, makin' Bacon Pankcakes...");
-  }else{
-    console.log("Let it go....LET IT GOOOOOOoOoOoOo")
-  }
-}
-}
-
-repeater(howMany, canDrinkBeer);
-
-
 
 /**
  *  #14
@@ -277,3 +264,14 @@ repeater(howMany, canDrinkBeer);
  */
 
 
+function repeater(printX, oldEnuff){
+  for(var i = 0; i<printX; i++){
+    if(oldEnuff){
+    console.log("Bacon Pancakes, makin' Bacon Pankcakes...");
+  }else{
+    console.log("Let it go....LET IT GOOOOOOoOoOoOo")
+  }
+}
+}
+
+repeater(howMany, canDrinkBeer);
